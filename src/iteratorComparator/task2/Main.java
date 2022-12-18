@@ -3,23 +3,39 @@ package iteratorComparator.task2;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+class Car{
+String name;
 
+    public Car(String name) {
+        this.name = name;
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> al = new ArrayList<>();
+        //creating list
+        List<Object> list = new ArrayList<>();
+        //adding elements to list
+        list.add("One");
+        list.add(new Car("BWM"));
+        list.add(3);
+        list.add(4);
+        list.add(5.25);
+        list.add(6);
+        list.add(7);
+        list.add(8);
+        list.add(9);
+        list.add("Word");
 
-        al.add(1);
-        al.add(2);
-        al.add(3);
-        al.add(4);
-        al.add(5);
-        al.add(6);
-        al.add(7);
-        al.add(8);
-        al.add(9);
-        al.add(10);
-
-        Iterator<Integer> iterator = al.iterator();
+        System.out.println(list);
+        //creating listIterator
+        ListIterator<Object>iterator = list.listIterator();
+        //foreach out print
+        while (iterator.hasNext()){
+           Object tmp = iterator.next();
+            System.out.println(tmp);
+        }
 
     }
 }
