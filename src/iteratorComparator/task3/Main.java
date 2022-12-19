@@ -1,9 +1,6 @@
 package iteratorComparator.task3;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 class Main{
     public static void main(String[] args) {
@@ -14,9 +11,15 @@ class Main{
         Animal a2 = new Animal("Bulldog",10,20,300);
         Animal a3 = new Animal("Husky",10,20,300);
         Animal a4 = new Animal("Chihua-hua",10,20,300);
-        Animal[]a = {a1,a2,a3,a4};
-        Arrays.sort(a);
 
+        ArrayList<Animal>a = new ArrayList<>();
+
+        a.add(a1);
+        a.add(a2);
+        a.add(a3);
+        a.add(a4);
+        //Врбуємо сортування-сортування відбудеться по породі так як всі інші поля однакові
+        Collections.sort(a);
 
         for(Animal tmp:a){
             System.out.println(tmp);
