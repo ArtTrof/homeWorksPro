@@ -1,0 +1,2 @@
+some text for test to input to file task4.txt 
+ some more text for test 1 2 3 4.5 @!!!1
