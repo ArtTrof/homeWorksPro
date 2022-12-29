@@ -5,7 +5,6 @@ import java.lang.reflect.*;
 public class Main {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> cl = Student.class;
-
         System.out.println("Constructors :");
         Constructor<?>[] cr = cl.getConstructors();
         int i = 0;
@@ -18,7 +17,6 @@ public class Main {
             System.out.println();
         }
         System.out.println();
-
         Field[] field = cl.getDeclaredFields();
         System.out.println("Fields:");
         for (Field tmp : field) {
@@ -28,7 +26,6 @@ public class Main {
             System.out.println("Modifier:" + getmod(tmp.getModifiers()));
         }
         System.out.println();
-
         Method[] methods = cl.getMethods();
         for (Method tmp:methods){
             System.out.println("Name:"+tmp.getName());
@@ -42,22 +39,7 @@ public class Main {
         }
         System.out.println("Class modifier:");
         int mod = cl.getModifiers();
-        if(Modifier.isPrivate(mod)){
-            System.out.print("Private ");
-        }if(Modifier.isPublic(mod)){
-            System.out.print("Public ");
-        }if(Modifier.isProtected(mod)){
-            System.out.print("Protected ");
-        }if(Modifier.isStatic(mod)){
-            System.out.print("Static ");
-        }if(Modifier.isAbstract(mod)){
-            System.out.print("Abstract ");
-        }if(Modifier.isFinal(mod)){
-            System.out.print("Final ");
-        }
-
-
-
+        System.out.println(getmod(mod));
     }
     public static String getmod(int a){
         if(Modifier.isPrivate(a)){
