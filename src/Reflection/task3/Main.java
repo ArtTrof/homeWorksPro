@@ -10,9 +10,9 @@ public class Main {
         int i = 0;
         for (Constructor<?> tmp : cr) {
             Class[] paramTypes = tmp.getParameterTypes();
-            System.out.println("Constructor " + (++i)+":");
+            System.out.println("Constructor " + (++i) + ":");
             for (Class<?> tmpp : paramTypes) {
-                System.out.print( tmpp.getName() + " ");
+                System.out.print(tmpp.getName() + " ");
             }
             System.out.println();
         }
@@ -23,36 +23,41 @@ public class Main {
             Class<?> fieldType = tmp.getType();
             System.out.println("Name:" + tmp.getName());
             System.out.println("Type:" + tmp.getType());
-            System.out.println("Modifier:" + getmod(tmp.getModifiers()));
+            System.out.println("Modifier:" + getModifiers(tmp.getModifiers()));
         }
         System.out.println();
         Method[] methods = cl.getMethods();
-        for (Method tmp:methods){
-            System.out.println("Name:"+tmp.getName());
-            System.out.println("return type:"+tmp.getReturnType().getName());
+        for (Method tmp : methods) {
+            System.out.println("Name:" + tmp.getName());
+            System.out.println("return type:" + tmp.getReturnType().getName());
             Class<?>[] paramtypes = tmp.getParameterTypes();
             System.out.println("Parameter types:");
-            for (Class<?> tmpp:paramtypes){
-                System.out.println(""+tmpp.getName());
+            for (Class<?> tmpp : paramtypes) {
+                System.out.println("" + tmpp.getName());
             }
             System.out.println();
         }
         System.out.println("Class modifier:");
         int mod = cl.getModifiers();
-        System.out.println(getmod(mod));
+        System.out.println(getModifiers(mod));
     }
-    public static String getmod(int a){
-        if(Modifier.isPrivate(a)){
-           return"Private";
-        }if(Modifier.isPublic(a)){
-           return "Public";
-        }if(Modifier.isProtected(a)){
+    public static String getModifiers(int a) {
+        if (Modifier.isPrivate(a)) {
+            return "Private";
+        }
+        if (Modifier.isPublic(a)) {
+            return "Public";
+        }
+        if (Modifier.isProtected(a)) {
             return "Protected";
-        }if(Modifier.isStatic(a)){
+        }
+        if (Modifier.isStatic(a)) {
             return "Static ";
-        }if(Modifier.isAbstract(a)){
+        }
+        if (Modifier.isAbstract(a)) {
             return "Abstract";
-        }if(Modifier.isFinal(a)){
+        }
+        if (Modifier.isFinal(a)) {
             return "Final";
         }
         return "";
