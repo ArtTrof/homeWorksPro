@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adress>
+    <city size="big">Kiev
+        <street>Podol</street>
+        <apartaments>14/6</apartaments>
+    </city>
+    <city size="average">Poltava
+        <street>Kalynova</street>
+        <apartaments>20</apartaments>
+    </city>
+</adress>
