@@ -1,4 +1,4 @@
-package SerializationXMLJSON.task3;
+package SerializationXMLJSON.task3.saxParser;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

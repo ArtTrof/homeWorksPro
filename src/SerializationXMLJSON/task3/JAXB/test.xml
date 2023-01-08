@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<address_List>
+    <city size="big">
+        <apartaments>18/6</apartaments>
+        <city>Kiev</city>
+        <street>Podol</street>
+    </city>
+    <city size="small">
+        <apartaments>18/6</apartaments>
+        <city>Lviv</city>
+        <street>Shokoladna</street>
+    </city>
+</address_List>
