@@ -12,7 +12,6 @@ public class Main {
         AddressList adress = new AddressList();
         adress.add(new City("Kiev","big","Podol","18/6"));
         adress.add(new City("Lviv","small","Shokoladna","18/6"));
-
         File file = new File("F:\\Programming\\EssentialJavaTests\\HomeWorksJavaPro\\src\\SerializationXMLJSON\\task3\\JAXB\\test.xml");
 
         JAXBContext jaxbContext = JAXBContext.newInstance(AddressList.class);
