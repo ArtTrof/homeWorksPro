@@ -5,7 +5,8 @@ public class Main {
         /**in this case we will see deadlock that means that program will
          be stunned because both threads have methods that call out each othrer
          and that will cause deadlock
-         To fix it we can add if clause (!is.alive) to do correct join of other method(to check that one of threads completed)*/
+         To fix it we can add if clause (!is.alive) to do correct join of other method(to check that one of threads completed)
+         */
 
 
         Thread1 t1 = new Thread1();
